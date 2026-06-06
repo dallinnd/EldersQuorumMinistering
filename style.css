@@ -1,11 +1,11 @@
 :root {
-  --primary: #1e3a8a; /* Deep blue */
-  --primary-light: #2563eb;
-  --bg: #f8fafc;
-  --card-bg: #ffffff;
-  --text: #0f172a;
-  --text-light: #64748b;
-  --border: #e2e8f0;
+  --primary: #254425;        /* Darker green header background */
+  --accent: #67dbbc;         /* Bright mint accent color */
+  --bg: #364036;             /* Base dark green background */
+  --card-bg: #366636;        /* Slate green tile background */
+  --text: #f1f5f1;           /* Crisp off-white text for dark modes */
+  --text-light: #b3cbb3;     /* Muted sage green text */
+  --border: #475a47;         /* Subtle split borders */
 }
 
 body {
@@ -17,16 +17,17 @@ body {
 
 header {
   background-color: var(--primary);
-  color: white;
+  color: var(--text);
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
 }
 
 header h1 {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .container {
@@ -51,8 +52,9 @@ h2 {
   text-align: left;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 0.05);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.15);
   cursor: pointer;
+  color: var(--text);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -65,12 +67,12 @@ h2 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  border-left: 5px solid var(--primary-light);
+  border-left: 5px solid var(--accent);
 }
 
 .agenda-tile h2 {
   margin: 0;
-  color: var(--primary);
+  color: var(--accent);
   font-size: 1.3rem;
 }
 .agenda-tile p {
@@ -102,7 +104,7 @@ h2 {
 }
 
 .month-attribute {
-  color: var(--primary-light);
+  color: var(--accent);
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -111,10 +113,10 @@ h2 {
 .month-card.current-month {
   flex-direction: column;
   align-items: flex-start;
-  order: -1; /* Forces it to the absolute top of the flex/grid layout */
+  order: -1; 
   padding: 0;
   overflow: hidden;
-  border: 2px solid var(--primary-light);
+  border: 2px solid var(--accent);
 }
 
 .current-month .hero-image {
@@ -122,7 +124,8 @@ h2 {
   height: 180px;
   background-size: cover;
   background-position: center;
-  background-color: #cbd5e1;
+  opacity: 0.85; /* Softens images slightly to mesh beautifully with a dark interface */
+  background-color: var(--primary);
 }
 
 .current-month .current-content {
@@ -145,7 +148,7 @@ h2 {
 
 .current-month .month-attribute {
   font-size: 1.3rem;
-  color: var(--primary);
+  color: var(--accent);
 }
 
 /* Modal Page View Layer */
@@ -157,10 +160,11 @@ h2 {
   z-index: 100;
   padding: 1.5rem;
   box-sizing: border-box;
+  color: var(--text);
 }
 .back-btn {
   background: none; border: none;
-  color: var(--primary-light);
+  color: var(--accent);
   font-weight: 600; font-size: 1rem;
   cursor: pointer; padding: 0; margin-bottom: 2rem;
 }
