@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ministering Council Meetings</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e3a8a">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
 
+  <header>
+    <h1>Ministering Council Meetings</h1>
+  </header>
+
+  <main class="container">
+    <!-- Agenda Tile -->
+    <section class="agenda-section">
+      <button class="tile agenda-tile" onclick="openAgenda()">
+        <div class="tile-icon">📋</div>
+        <h2>Agenda</h2>
+        <p>Council Meeting Agenda</p>
+      </button>
+    </section>
+
+    <!-- Short Trainings Section -->
+    <section class="trainings-section">
+      <h2>Short Trainings</h2>
+      <div id="months-grid" class="months-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Temporary placeholder for the Agenda View -->
+  <div id="agenda-page" class="modal-page hidden">
+    <div class="modal-content">
+      <button class="back-btn" onclick="closeAgenda()">← Back to Dashboard</button>
+      <h1>Council Meeting Agenda</h1>
+      <p><em>Standardized page details to be provided later...</em></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
