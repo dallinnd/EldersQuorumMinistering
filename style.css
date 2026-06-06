@@ -1,1 +1,166 @@
+:root {
+  --primary: #1e3a8a; /* Deep blue */
+  --primary-light: #2563eb;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text: #0f172a;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+}
 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Button & Base Tile Styling */
+.tile {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.05);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tile:active {
+  transform: scale(0.98);
+}
+
+/* Agenda Tile Specifics */
+.agenda-tile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-left: 5px solid var(--primary-light);
+}
+
+.agenda-tile h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+.agenda-tile p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+.tile-icon {
+  font-size: 1.75rem;
+}
+
+/* Grid System for Months */
+.months-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Standard Month Card (Rectangular/Wide row) */
+.month-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.month-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.month-attribute {
+  color: var(--primary-light);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Featured Current Month Card (Large Square at the top) */
+.month-card.current-month {
+  flex-direction: column;
+  align-items: flex-start;
+  order: -1; /* Forces it to the absolute top of the flex/grid layout */
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid var(--primary-light);
+}
+
+.current-month .hero-image {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-color: #cbd5e1;
+}
+
+.current-month .current-content {
+  padding: 1.25rem;
+}
+
+.current-month .month-name {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.current-month .attribute-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+.current-month .month-attribute {
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+/* Modal Page View Layer */
+.hidden { display: none !important; }
+.modal-page {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--bg);
+  z-index: 100;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+.back-btn {
+  background: none; border: none;
+  color: var(--primary-light);
+  font-weight: 600; font-size: 1rem;
+  cursor: pointer; padding: 0; margin-bottom: 2rem;
+}
