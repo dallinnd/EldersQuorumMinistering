@@ -29,9 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 1. Render Current Month (Large Featured Square)
-  const heroCard = document.createElement("button");
-  heroCard.className = "tile month-card current-month";
-  heroCard.innerHTML = `
+  // 1. Render Current Month (Large Featured Square) as a Link
+  const heroLink = document.createElement("a");
+  heroLink.href = `${currentMonthData.name.toLowerCase()}.html`;
+  heroLink.className = "tile month-card current-month";
+  heroLink.style.textDecoration = "none";
+  heroLink.innerHTML = `
     <div class="hero-image" style="background-image: url('${currentMonthData.img}')"></div>
     <div class="current-content">
       <div class="month-name">${currentMonthData.name} (Current)</div>
@@ -39,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="month-attribute">${currentMonthData.attribute}</div>
     </div>
   `;
-  grid.appendChild(heroCard);
+  grid.appendChild(heroLink);
 
   // 2. Render the rest of the queue
   // Inside your render loop:
