@@ -42,14 +42,18 @@ document.addEventListener("DOMContentLoaded", () => {
   grid.appendChild(heroCard);
 
   // 2. Render the rest of the queue
+  // Inside your render loop:
   remainderMonths.forEach(m => {
-    const card = document.createElement("button");
-    card.className = "tile month-card";
-    card.innerHTML = `
+    const link = document.createElement("a");
+    // Assuming file names are lowercase: january.html, february.html, etc.
+    link.href = `${m.name.toLowerCase()}.html`; 
+    link.className = "tile month-card";
+    link.style.textDecoration = "none"; // Clean up link look
+    link.innerHTML = `
       <span class="month-name">${m.name}</span>
       <span class="month-attribute">${m.attribute}</span>
     `;
-    grid.appendChild(card);
+    grid.appendChild(link);
   });
 });
 
