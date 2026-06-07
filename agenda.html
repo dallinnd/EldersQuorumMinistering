@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Council Meeting Agenda</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific styles for the Agenda layout */
+    .agenda-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+    .time-badge {
+      background: var(--accent);
+      color: var(--bg);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      min-width: 70px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .item-content {
+      font-weight: 500;
+      color: var(--text);
+    }
+    .sub-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 5px 0 0 0;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body style="padding: 20px; max-width: 600px; margin: auto;">
+
+  <header style="background: transparent; box-shadow: none; padding: 0; text-align: left; margin-bottom: 2rem;">
+    <a href="index.html" style="color: var(--accent); text-decoration: none; font-weight: bold;">← Back to Dashboard</a>
+  </header>
+
+  <main>
+    <h1>Council Meeting Agenda</h1>
+    
+    <!-- Agenda Tile Container -->
+    <div class="tile">
+      <div class="agenda-item">
+        <div class="time-badge">Start</div>
+        <div class="item-content"><strong>Opening Prayer</strong></div>
+      </div>
+      
+      
+      <!-- 5 Minutes - Training -->
+      <div class="agenda-item">
+        <div class="time-badge">5 Min</div>
+        <div class="item-content">
+          <strong>Short Training</strong><br>
+          <a href="january.html" style="color: var(--accent);">View January Training</a>
+        </div>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid var(--border); margin: 15px 0;">
+
+      <!-- 10 Minutes - Announcements -->
+      <div class="agenda-item">
+        <div class="time-badge">10 Min</div>
+        <div class="item-content">
+          <strong>Announcements</strong>
+          <ul class="sub-list">
+            <li>1. Next Council Meeting</li>
+            <li>2. Sister Ministering Rep</li>
+            <li>3. Temple Trip</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid var(--border); margin: 15px 0;">
+
+      <!-- 5 Minutes - Reporting -->
+      <div class="agenda-item">
+        <div class="time-badge">5 Min</div>
+        <div class="item-content">
+          <strong>Reporting</strong>
+          <ul class="sub-list">
+            <li>1. Blessing Administered</li>
+            <li>2. Miracles</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid var(--border); margin: 15px 0;">
+
+      <!-- 5 Minutes - Get Together -->
+      <div class="agenda-item">
+        <div class="time-badge">5 Min</div>
+        <div class="item-content">
+          <strong>Get Together</strong><br>
+          <small>Plan when ministers can visit this month</small>
+        </div>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid var(--border); margin: 15px 0;">
+
+      <!-- Closing -->
+      <div class="agenda-item">
+        <div class="time-badge">Final</div>
+        <div class="item-content"><strong>Closing Prayer</strong></div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
