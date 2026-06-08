@@ -2,9 +2,9 @@
   --primary: #800000;       /* Maroon */
   --accent: #CE2029;        /* Fire Engine Red */
   --bg: #612D36;            /* Blackberry (Deep Shade) */
-  --card-bg: #CB4154;       /* Brick Red */
-  --text: #FA8072;          /* Salmon (Crisp light tone) */
-  --text-light: #C08081;    /* Dusty Rose (Muted text) */
+  --card-bg: #a17c81;       /* Brick Red */
+  --text: #663934;          /* Salmon (Crisp light tone) */
+  --text-light: #f7c8c9;    /* Dusty Rose (Muted text) */
   --border: #E44D2E;        /* Cinnabar (High-contrast border) */
 }
 
