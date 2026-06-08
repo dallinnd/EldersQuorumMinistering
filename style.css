@@ -1,11 +1,11 @@
 :root {
-  --primary: #800000;       /* Maroon */
-  --accent: #CE2029;        /* Fire Engine Red */
-  --bg: #612D36;            /* Blackberry (Deep Shade) */
-  --card-bg: #a17c81;       /* Brick Red */
-  --text: #663934;          /* Salmon (Crisp light tone) */
-  --text-light: #f7c8c9;    /* Dusty Rose (Muted text) */
-  --border: #E44D2E;        /* Cinnabar (High-contrast border) */
+  --primary: #4a1f1f;       /* Maroon */
+  --accent: #e3afaf;        /* Fire Engine Red */
+  --bg: #403636;            /* Blackberry (Deep Shade) */
+  --card-bg: #663636;       /* Brick Red */
+  --text: #f5f1f1;          /* Salmon (Crisp light tone) */
+  --text-light: #cbb3b3;    /* Dusty Rose (Muted text) */
+  --border: #5a4747;        /* Cinnabar (High-contrast border) */
 }
 
 body {
