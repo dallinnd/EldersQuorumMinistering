@@ -1,17 +1,17 @@
 // 12 Months mapped to Chapter 6 of Preach My Gospel attributes
 const monthlyData = [
-  { id: 0, name: "January", attribute: "Faith in Jesus Christ", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600" },
-  { id: 1, name: "February", attribute: "Hope", img: "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=600" },
-  { id: 2, name: "March", attribute: "Charity", img: "https://images.unsplash.com/photo-1469571486040-4b9b1a4a751f?w=600" },
-  { id: 3, name: "April", attribute: "Love", img: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600" },
-  { id: 4, name: "May", attribute: "Virtue", img: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600" },
-  { id: 5, name: "June", attribute: "Knowledge", img: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600" },
-  { id: 6, name: "July", attribute: "Patience", img: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600" },
-  { id: 7, name: "August", attribute: "Humility", img: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600" },
-  { id: 8, name: "September", attribute: "Diligence", img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600" },
-  { id: 9, name: "October", attribute: "Obedience", img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" },
-  { id: 10, name: "November", attribute: "Integrity", img: "https://images.unsplash.com/photo-1455734729978-db1ae4f687fc?w=600" },
-  { id: 11, name: "December", attribute: "Service", img: "https://images.unsplash.com/photo-1559027615-cd4428a633a0?w=600" }
+  { id: 0, name: "January", attribute: "Faith in Jesus Christ" },
+  { id: 1, name: "February", attribute: "Hope" },
+  { id: 2, name: "March", attribute: "Charity" },
+  { id: 3, name: "April", attribute: "Love" },
+  { id: 4, name: "May", attribute: "Virtue" },
+  { id: 5, name: "June", attribute: "Knowledge" },
+  { id: 6, name: "July", attribute: "Patience" },
+  { id: 7, name: "August", attribute: "Humility" },
+  { id: 8, name: "September", attribute: "Diligence" },
+  { id: 9, name: "October", attribute: "Obedience" },
+  { id: 10, name: "November", attribute: "Integrity" },
+  { id: 11, name: "December", attribute: "Service" }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,13 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 1. Render Current Month (Large Featured Square)
-  // 1. Render Current Month (Large Featured Square) as a Link
   const heroLink = document.createElement("a");
   heroLink.href = `${currentMonthData.name.toLowerCase()}.html`;
   heroLink.className = "tile month-card current-month";
   heroLink.style.textDecoration = "none";
+
+  // Construct the filename dynamically: "picture_" + "january" + ".png"
+  const imgPath = `picture_${currentMonthData.name.toLowerCase()}.png`;
+
   heroLink.innerHTML = `
-    <div class="hero-image" style="background-image: url('${currentMonthData.img}')"></div>
+    <div class="hero-image" style="background-image: url('${imgPath}')"></div>
     <div class="current-content">
       <div class="month-name">${currentMonthData.name} (Current)</div>
       <div class="attribute-label">Focus Attribute</div>
