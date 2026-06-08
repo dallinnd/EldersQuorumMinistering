@@ -1,11 +1,11 @@
 :root {
-  --primary: #254425;        /* Darker green header background */
-  --accent: #b4e3af;         /* Bright mint accent color */
-  --bg: #364036;             /* Base dark green background */
-  --card-bg: #366636;        /* Slate green tile background */
-  --text: #f1f5f1;           /* Crisp off-white text for dark modes */
-  --text-light: #b3cbb3;     /* Muted sage green text */
-  --border: #475a47;         /* Subtle split borders */
+  --primary: #800000;       /* Maroon */
+  --accent: #CE2029;        /* Fire Engine Red */
+  --bg: #612D36;            /* Blackberry (Deep Shade) */
+  --card-bg: #CB4154;       /* Brick Red */
+  --text: #FA8072;          /* Salmon (Crisp light tone) */
+  --text-light: #C08081;    /* Dusty Rose (Muted text) */
+  --border: #E44D2E;        /* Cinnabar (High-contrast border) */
 }
 
 body {
